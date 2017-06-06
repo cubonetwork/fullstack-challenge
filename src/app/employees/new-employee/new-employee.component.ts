@@ -1,10 +1,11 @@
+import { Employee } from '../employee.interface';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-new-employee',
+  selector: 'new-employee',
   templateUrl: './new-employee.component.html',
-  styleUrls: ['./new-employee.component.css']
+  styleUrls: ['./new-employee.component.scss']
 })
 export class NewEmployeeComponent implements OnInit {
 
@@ -19,4 +20,7 @@ export class NewEmployeeComponent implements OnInit {
     });
   }
 
+  public saveEmployee(employee: Employee){
+    console.log(employee);
+  }
 }
