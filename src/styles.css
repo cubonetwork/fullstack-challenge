@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+html,body, ul,ol {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+    min-width: 320px;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+/*
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+main{
+    min-height: 100%;
+    position: relative;
+    font: 14px/16px "Roboto", sans-serif;
+    color: #ffffff;
+    background-color: #F0F3F4;
+}*/
