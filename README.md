@@ -9,7 +9,7 @@ Objetivo deste desafio é avaliarmos o seu domínio em desenvolvimento fullstack
     - HTML e CSS (ou algum pré-processador); 
     - Algum framework SPA (Single Page Application). Sugestão: **Angular 2**;
     - APIs em **Node.js**;
-3. Submeter o link do seu repositório com o código do desafio **até 10 dias** após a sua aplicação na [vaga pelo site]()
+3. Submeter o link do seu repositório com o código do desafio **até 10 dias** após a sua aplicação na [vaga pelo site](https://cubo.network/jobs/d69815f0-4aca-11e7-bfed-2930c9251a9d)
 
 ## O Desafio
 
