@@ -13,7 +13,7 @@ Objetivo deste desafio é avaliarmos o seu domínio em desenvolvimento fullstack
 ## O Desafio
 
 Este é o layout que deverá ser produzido:
-![layout](https://github.com/cubonetwork/fullstack-challenge/blob/master/layout-onepage.png)
+![layout](layout-onepage.png)
 
 Aqui vai o layout em PSD:
 [Download do arquivo](layout-onepage.psd)
