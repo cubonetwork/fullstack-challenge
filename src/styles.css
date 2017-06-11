@@ -11,6 +11,9 @@ html,body, ul,ol {
     margin-right: auto;
     text-align: center;
 }
+.container-fluid{
+    padding: 0px;
+}
 /*
 .center {
     margin-left: auto;

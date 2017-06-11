@@ -20,7 +20,9 @@ export function reducer(state = initialState, action: employeeActions.Actions): 
             });
         }
         case employeeActions.LOAD_EMPLOYEE_COMPLETE: {
-            return Object.assign({}, state, {
+            return Object.assign({}, state,{
+                loaded: true,
+                loading: false,
                 employees: action.payload
             });
         }

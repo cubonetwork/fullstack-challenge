@@ -1,5 +1,6 @@
-import { EmployeeEffects } from './redux/employeeCollection/employeeCollection.effect';
-import { reducers } from './redux';
+import { EmployeeEffects } from './redux/employee/employee.effect';
+import { EmployeeCollectionEffects } from './redux/employeeCollection/employeeCollection.effect';
+import { reducer } from './redux';
 import { EmployeeService } from './employees/employee.service';
 import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';
@@ -25,7 +26,8 @@ import { StoreModule } from "@ngrx/store";
     NgbModule.forRoot(),
     RouterModule,
     routing,
-    StoreModule.provideStore(reducers),
+    StoreModule.provideStore(reducer),
+    EffectsModule.run(EmployeeCollectionEffects),
     EffectsModule.run(EmployeeEffects),
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 5

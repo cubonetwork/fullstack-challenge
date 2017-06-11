@@ -14,11 +14,8 @@ import { Store } from '@ngrx/store';
 })
 export class EmployeeReportComponent implements OnInit, OnDestroy {
 
-
-  //employeesSubscription: Subscription;
   employees$: Observable<Employee[]>;
   constructor(private store: Store<State>) {
-    //this.employeesSubscription = store.select(getEmployees).subscribe(data => console.log(data));
     this.employees$ = store.select(getEmployees);
   }
 
@@ -27,7 +24,6 @@ export class EmployeeReportComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    //this.employeesSubscription.unsubscribe();
   }
 
 }

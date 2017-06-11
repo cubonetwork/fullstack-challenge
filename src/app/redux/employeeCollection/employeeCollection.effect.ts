@@ -13,7 +13,7 @@ import { Observable } from 'rxjs/Observable';
 import * as employeeActions from './employeeCollection.action';
 
 @Injectable()
-export class EmployeeEffects{
+export class EmployeeCollectionEffects{
     constructor(private EmployeeService: EmployeeService, private actions$: Actions) { }
     @Effect() 
     loadEmployee$: Observable<Action>  = this.actions$
