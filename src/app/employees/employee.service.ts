@@ -14,8 +14,8 @@ export class EmployeeService {
     return this.http.post(this.url, employee).map(response => response.json() as Employee);
   }
 
-  getAllEmployees(employee: Employee): Observable<Employee>{
-    return this.http.post(this.url, employee).map(response => response.json() as Employee);
+  getAllEmployees(): Observable<Employee[]>{
+    return this.http.get(this.url).map(response => response.json() as Employee[]);
   }
 
 }
