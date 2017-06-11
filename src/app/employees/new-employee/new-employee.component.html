@@ -8,7 +8,7 @@
   <form [formGroup]="employeeForm" novalidate (ngSubmit)="saveEmployee(employeeForm.value)" class="form-inline justify-content-center">
     <input type="text" class="form-control mb-4 mr-sm-4 mb-sm-4" id="inlineFormInput" placeholder="Nome" formControlName="firstName">
     <input type="text" class="form-control mb-4 mr-sm-4 mb-sm-4" placeholder="Sobrenome">
-    <input type="text" class="form-control mb-4 mr-sm-4 mb-sm-4" placeholder="Participacao">
+    <input type="number" class="form-control mb-4 mr-sm-4 mb-sm-4" placeholder="Participacao">
 
     <button type="submit" class="btn btn-primary mb-4 mr-sm-4 mb-sm-4">Enviar</button>
   </form>

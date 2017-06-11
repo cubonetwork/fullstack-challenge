@@ -6,7 +6,7 @@ import { NewEmployeeComponent } from './new-employee/new-employee.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeeReportComponent } from './employee-report/employee-report.component';
-
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   imports: [
@@ -16,6 +16,7 @@ import { EmployeeReportComponent } from './employee-report/employee-report.compo
     NgbModule,
     routing
   ],
+  providers: [EmployeeService],
   declarations: [NewEmployeeComponent, EmployeesComponent, EmployeeReportComponent]
 })
 export class EmployeesModule { }
