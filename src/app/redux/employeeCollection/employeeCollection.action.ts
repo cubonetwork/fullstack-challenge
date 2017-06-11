@@ -1,4 +1,4 @@
-import { Employee } from '../employee.interface';
+import { Employee } from '../../employees/employee.interface';
 import { Action } from '@ngrx/store';
 
 //Define actions types

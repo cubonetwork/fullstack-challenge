@@ -1,3 +1,5 @@
+import { Employee } from '../../employees/employee.interface';
+import { EmployeeService } from '../../employees/employee.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/startWith';
@@ -5,12 +7,10 @@ import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/toArray';
 import { Injectable } from '@angular/core';
-import { EmployeeService } from '../employee.service';
-import { Employee } from '../employee.interface';
 import { Actions, Effect } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import * as employeeActions from './employee.action';
+import * as employeeActions from './employeeCollection.action';
 
 @Injectable()
 export class EmployeeEffects{

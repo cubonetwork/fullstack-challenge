@@ -2,27 +2,27 @@
   "employees": [
     {
       "id": 1,
-      "nome": "Vitor",
-      "sobrenome": "Silva Lima",
-      "participacao": "5"
+      "firstName": "Vitor",
+      "lastName": "Silva Lima",
+      "participation": "5"
     },
     {
       "id": 2,
-      "nome": "Vinicius",
-      "sobrenome": "Albino",
-      "participacao": "95"
+      "firstName": "Vinicius",
+      "lastName": "Albino",
+      "participation": "95"
     },
     {
       "id": 3,
-      "nome": "Bruna",
-      "sobrenome": "Henrique",
-      "participacao": "5"
+      "firstName": "Bruna",
+      "lastName": "Henrique",
+      "participation": "5"
     },
     {
       "id": 4,
-      "nome": "Isa",
-      "sobrenome": "Andrade",
-      "participacao": "5"
+      "firstName": "Isa",
+      "lastName": "Andrade",
+      "participation": "5"
     }
   ]
 }

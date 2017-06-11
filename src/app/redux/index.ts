@@ -1,6 +1,5 @@
-import { Employee } from '../employee.interface';
 import { createSelector } from 'reselect';
-import * as fromEmployee from './employee.reducer';
+import * as fromEmployee from './employeeCollection/employeeCollection.reducer';
 
 export interface State {
   employees: fromEmployee.State;

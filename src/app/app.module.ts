@@ -1,5 +1,5 @@
-import { reducers } from './employees/redux';
-import { EmployeeEffects } from './employees/redux/employee.effect';
+import { EmployeeEffects } from './redux/employeeCollection/employeeCollection.effect';
+import { reducers } from './redux';
 import { EmployeeService } from './employees/employee.service';
 import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';

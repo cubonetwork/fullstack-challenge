@@ -1,5 +1,5 @@
-import { Employee } from '../employee.interface';
-import * as employeeActions from './employee.action';
+import { Employee } from '../../employees/employee.interface';
+import * as employeeActions from './employeeCollection.action';
 
 export interface State {
     loaded: boolean;
