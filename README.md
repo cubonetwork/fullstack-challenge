@@ -39,7 +39,7 @@ Você deve desenvolver esta API que retorna o JSON com a lista de "employees" (f
  
 > Obs 2.: Considere que todos os campos são de preenchimento obrigatório no formulário.
 
-> Obs 3.: Considere validar os campos também na API e em caso de inconsistência retornar erro num JSON estruturado com código HTTP 500
+> Obs 3.: Considere validar os campos também na API e em caso de inconsistência retornar erro num JSON estruturado com código HTTP 400
 
 
 ## Dicas Angular 2
