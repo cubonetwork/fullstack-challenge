@@ -24,7 +24,10 @@ export class EmployeeEffects{
     .mergeMap( employee => 
         this.EmployeeService.createEmployee(employee)
         .map(()=> new employeeActions.CreateEmployeeSucessAction())
-        .catch(() => of(new employeeActions.CreateEmployeeFailedAction()))
+        .catch((error) => {
+            console.log(error);
+            return of(new employeeActions.CreateEmployeeFailedAction())
+        })
     );
     
     @Effect() 

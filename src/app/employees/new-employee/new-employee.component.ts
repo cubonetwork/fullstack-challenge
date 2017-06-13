@@ -1,10 +1,16 @@
 import { CreateEmployeeAction } from '../../redux/employee/employee.action';
 import { Subscription } from 'rxjs/Rx';
-import { State, getEmployeeCreatedStatus } from '../../redux';
+import { State, getEmployeeStatus } from '../../redux';
 import { Employee } from '../employee.interface';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
+
+interface Status{
+  created: boolean;
+  creating: boolean;
+  failed: boolean;
+}
 
 @Component({
   selector: 'new-employee',
@@ -22,7 +28,12 @@ export class NewEmployeeComponent implements OnInit, OnDestroy {
       lastName: ['', [Validators.required]],
       participation: ['', [Validators.required]]
     });
-    this.subscription = this.store.select(getEmployeeCreatedStatus).subscribe((data)=>console.log(data));
+    this.subscription = this.store.select(getEmployeeStatus)
+    .subscribe((data: Status)=>{
+      if(data.creating==false && data.failed==true){
+        console.log('error');
+      }
+    });
   }
 
   ngOnDestroy(): void {

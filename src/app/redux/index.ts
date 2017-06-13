@@ -28,4 +28,5 @@ export const getEmployeeState = (state: State) => state.employee;
 
 export const getEmployees = createSelector(getEmployeesState, fromEmployeesCollection.getEmployees);
 export const getEmployeeCreatedStatus = createSelector(getEmployeeState, fromEmployee.getCreatedStatus);
+export const getEmployeeStatus = createSelector(getEmployeeState, fromEmployee.getStatus);
 

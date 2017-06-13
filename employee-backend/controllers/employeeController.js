@@ -1,5 +1,5 @@
 const employeeModel = require('../db/employee');
-
+const RequrestError = require('../util/requestError');
 
 exports.postEmployee = (req, resp, next)=>{
     const employee = req.body || {};
@@ -11,7 +11,15 @@ exports.postEmployee = (req, resp, next)=>{
         resp.status(200)
         .json(savedEmployee);
     }).catch(error => {
-       next(error);
+        let errorMessage = new RequrestError();
+        if(error.name == 'ValidationError'){
+            errorMessage.status = 400;
+            errorMessage.name = "Erro de validação";
+            errorMessage.message ="Por favor, informe todos os campos da API";
+            next(errorMessage);
+        }else{
+            next(error);
+        }
     });
     
 }
@@ -22,8 +30,7 @@ exports.getEmployees = (req, resp, next)=>{
         resp.status(200)
         .json(employees);
     }).catch(error => {
-        console.log(error);
-       next(error);
+        next(error);
     });
 }
 

@@ -4,11 +4,13 @@ import * as employeeActions from './employee.action';
 export interface State {
     creating: boolean;
     created: boolean;
+    failed: boolean;
     employee: Employee;
 };
 const initialState: State = {
     creating: false,
     created: false,
+    failed: false,
     employee: {
         firstName: '',
         lastName: '',
@@ -21,6 +23,8 @@ export function reducer(state = initialState, action: employeeActions.Actions): 
         case employeeActions.CREATE_EMPLOYEE: {
             return Object.assign({}, state, {
                 creating: true,
+                failed:false,
+                created:false,
                 employee: action.payload
             });
         }
@@ -35,6 +39,7 @@ export function reducer(state = initialState, action: employeeActions.Actions): 
             return Object.assign({}, state,{
                 created: false,
                 creating: false,
+                failed: true,
                 employee: initialState.employee
             });
         }
@@ -45,3 +50,10 @@ export function reducer(state = initialState, action: employeeActions.Actions): 
 }
 
 export const getCreatedStatus = (state: State) => state.created;
+export const getStatus = (state: State) => {
+    return {
+        failed: state.failed,
+        created: state.created,
+        creating: state.creating
+    }
+};
