@@ -2,11 +2,9 @@
 
 Objetivo deste desafio é avaliarmos o seu domínio em desenvolvimento fullstack, ou seja, sua organização, estilo e boas práticas com o código, criação de APIs Restfull, conhecimento dos frameworks e tecnologias utilizadas.
 
-
 ## FullStack Challenge Backend
 * https://github.com/vitorsilvalima/fullstack-challenge-backend
-
-
+* ps: seguir a o readme do projeto
 
 ## Regras
 
