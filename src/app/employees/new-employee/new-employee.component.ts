@@ -32,6 +32,8 @@ export class NewEmployeeComponent implements OnInit, OnDestroy {
     .subscribe((data: Status)=>{
       if(data.creating==false && data.failed==true){
         console.log('error');
+      }else if(data.created==true && data.creating==false){
+        this.employeeForm.reset();
       }
     });
   }
@@ -41,7 +43,6 @@ export class NewEmployeeComponent implements OnInit, OnDestroy {
   }
 
   public saveEmployee(employee: Employee){
-    console.log(employee);
     this.store.dispatch(new CreateEmployeeAction(employee));
   }
 }

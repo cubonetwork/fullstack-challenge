@@ -8,6 +8,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeeReportComponent } from './employee-report/employee-report.component';
 import { EmployeeService } from './employee.service';
 import { EmployeeTableComponent } from './employee-report/employee-table/employee-table.component';
+import { EmployeeChartComponent } from './employee-report/employee-chart/employee-chart.component';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
   imports: [
@@ -15,9 +17,10 @@ import { EmployeeTableComponent } from './employee-report/employee-table/employe
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
-    routing
+    routing,
+    ChartsModule
   ],
   providers: [EmployeeService],
-  declarations: [NewEmployeeComponent, EmployeesComponent, EmployeeReportComponent, EmployeeTableComponent]
+  declarations: [NewEmployeeComponent, EmployeesComponent, EmployeeReportComponent, EmployeeTableComponent, EmployeeChartComponent]
 })
 export class EmployeesModule { }
