@@ -14,7 +14,7 @@ const initialState: State = {
     employee: {
         firstName: '',
         lastName: '',
-        participation: '',
+        participation: 0
     }
 };
 

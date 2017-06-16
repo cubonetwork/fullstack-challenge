@@ -35,7 +35,7 @@ export class EmployeeChartComponent implements AfterViewInit, OnDestroy{
   data = {
     datasets: [{
           data: [],
-          backgroundColor: ['rgba(121, 121, 255, 0.2)', 'rgba(255, 121, 121, 0.2)', 'rgba(255, 121, 121, 0.2)']
+          backgroundColor: []
       }],
 
       labels: []
@@ -46,11 +46,14 @@ export class EmployeeChartComponent implements AfterViewInit, OnDestroy{
     this.chart = new Chart(el.getContext('2d'), {
         type: 'doughnut',
         data: this.data,
-        //options: this.barChartOptions
+        options: this.barChartOptions
     });
     this.employees.subscribe((data:Employee[])=>{
-      this.data.datasets[0].data= data.map(employee=> employee.participation);
+      this.data.datasets[0].data= data.map(employee=> employee.participation.toFixed(2));
       this.data.labels= data.map(employee=> { return employee.firstName + " "+ employee.lastName;});
+      if(this.data.datasets[0].backgroundColor.length<=this.data.datasets[0].data.length){
+        this.generateColors(this.data.datasets[0].data.length-this.data.datasets[0].backgroundColor.length);
+      }
       this.chart.update();
     });
   }
@@ -59,7 +62,18 @@ export class EmployeeChartComponent implements AfterViewInit, OnDestroy{
       this.chart.destroy();
     }
   }
+  generateColors(n:number){
+    for(let i =0; i< n;i++){
+      this.data.datasets[0].backgroundColor.push(this.rgba());
+    }
+  }
+  rgba():string {
+    return 'rgb(' +this.getRandomInt(0,255) +','+this.getRandomInt(0,255)+','+this.getRandomInt(0,255)+')';
+  }
 
+  getRandomInt(min:number, max:number):number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 
 }
