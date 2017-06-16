@@ -13,7 +13,7 @@ export class EmployeeTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.employees);
+    //console.log(this.employees);
   }
 
 }

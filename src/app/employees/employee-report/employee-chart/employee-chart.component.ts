@@ -1,55 +1,66 @@
+import { Observable } from 'rxjs/Rx';
+import { Employee } from '../../employee.interface';
 import {
     Component,
     ViewChild,
     Input,
-    Output,
+    Output, 
     ElementRef,
     EventEmitter,
-    AfterViewInit
+    OnDestroy,
+    AfterViewInit, ChangeDetectionStrategy
 } from '@angular/core';
+import * as Chart from 'chart.js';
 
 declare var google:any;
 declare var googleLoaded:any;
 @Component({
   selector: 'app-employee-chart',
   templateUrl: './employee-chart.component.html',
-  styleUrls: ['./employee-chart.component.css']
+  styleUrls: ['./employee-chart.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EmployeeChartComponent implements AfterViewInit {
+export class EmployeeChartComponent implements AfterViewInit, OnDestroy{
 
+  @Input("employees") employees: Observable<Employee[]>;
   @ViewChild('searchGrid') _selector: ElementRef;
-  private chart;
+  public chart: any;
+  public barChartOptions:any = {
+    scaleShowVerticalLines: false,
+    responsive: true,
+    legend:{
+      position: 'bottom'
+    }
+  };
 
-  constructor() { }
+  data = {
+    datasets: [{
+          data: [],
+          backgroundColor: ['rgba(121, 121, 255, 0.2)', 'rgba(255, 121, 121, 0.2)', 'rgba(255, 121, 121, 0.2)']
+      }],
+
+      labels: []
+  };
 
   ngAfterViewInit(): void {
-
-    console.log(this._selector.nativeElement);
-    google.charts.load('current', {'packages':['corechart']});
-    setTimeout(() => this.draw(), 1000);
+    let el = this._selector.nativeElement as HTMLCanvasElement;
+    this.chart = new Chart(el.getContext('2d'), {
+        type: 'doughnut',
+        data: this.data,
+        //options: this.barChartOptions
+    });
+    this.employees.subscribe((data:Employee[])=>{
+      this.data.datasets[0].data= data.map(employee=> employee.participation);
+      this.data.labels= data.map(employee=> { return employee.firstName + " "+ employee.lastName;});
+      this.chart.update();
+    });
   }
-  draw(){
-      google.charts.setOnLoadCallback(drawChart);
-      const element = this._selector.nativeElement;
-        function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-              ['Task', 'Hours per Day'],
-              ['Work',     11],
-              ['Eat',      2],
-              ['Commute',  2],
-              ['Watch TV', 2],
-              ['Sleep',    7]
-            ]);
-
-            var options = {
-              title: 'My Daily Activities'
-            };
-
-            var chart = new google.visualization.PieChart(element);
-            chart.draw(data, options);
-        }
+  ngOnDestroy(): void {
+    if(this.chart){
+      this.chart.destroy();
+    }
   }
-  
+
 
 
 }

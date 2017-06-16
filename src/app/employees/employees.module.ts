@@ -9,7 +9,6 @@ import { EmployeeReportComponent } from './employee-report/employee-report.compo
 import { EmployeeService } from './employee.service';
 import { EmployeeTableComponent } from './employee-report/employee-table/employee-table.component';
 import { EmployeeChartComponent } from './employee-report/employee-chart/employee-chart.component';
-import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
   imports: [
@@ -18,7 +17,6 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     FormsModule,
     NgbModule,
     routing,
-    ChartsModule
   ],
   providers: [EmployeeService],
   declarations: [NewEmployeeComponent, EmployeesComponent, EmployeeReportComponent, EmployeeTableComponent, EmployeeChartComponent]
