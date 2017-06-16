@@ -9,6 +9,7 @@ import { EmployeeReportComponent } from './employee-report/employee-report.compo
 import { EmployeeService } from './employee.service';
 import { EmployeeTableComponent } from './employee-report/employee-table/employee-table.component';
 import { EmployeeChartComponent } from './employee-report/employee-chart/employee-chart.component';
+import { SimpleNotificationsModule } from "angular2-notifications";
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { EmployeeChartComponent } from './employee-report/employee-chart/employe
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
+    SimpleNotificationsModule,    
     routing,
   ],
   providers: [EmployeeService],

@@ -18,7 +18,6 @@ declare var googleLoaded:any;
   selector: 'app-employee-chart',
   templateUrl: './employee-chart.component.html',
   styleUrls: ['./employee-chart.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeeChartComponent implements AfterViewInit, OnDestroy{
 

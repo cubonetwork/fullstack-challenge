@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { SimpleNotificationsModule } from 'angular2-notifications';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { EffectsModule } from "@ngrx/effects";
@@ -31,7 +33,9 @@ import { StoreModule } from "@ngrx/store";
     EffectsModule.run(EmployeeEffects),
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 5
-    })
+    }),
+    BrowserAnimationsModule,
+    SimpleNotificationsModule.forRoot(),
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
