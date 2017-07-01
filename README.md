@@ -4,7 +4,7 @@ Objetivo deste desafio é avaliarmos o seu domínio em desenvolvimento fullstack
 
 ## Regras
 
-1. Todo o seu código deve ser disponibilizado num repositório público em seu github ou bitbucket pessoal. Envie o link para dev@cubo.network ou faça um pull-request deste repositório;  
+1. Todo o seu código deve ser disponibilizado num repositório público ou privado em seu github ou bitbucket pessoal. Envie o link para dev@cubo.network ou faça um pull-request deste repositório;  
 2. Desenvolver o projeto utilizando: 
     - HTML e CSS (ou algum pré-processador); 
     - Algum framework SPA (Single Page Application). Sugestão: **Angular 2**;
