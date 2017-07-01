@@ -1,0 +1,15 @@
+<div class="new-employee">
+  <h2 class="center">CADASTRE-SE</h2>
+
+
+  <p class="center">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </p>
+  <form [formGroup]="employeeForm" novalidate (ngSubmit)="saveEmployee(employeeForm.value)" class="form-inline justify-content-center">
+    <input type="text" class="form-control mb-4 mr-sm-4 mb-sm-4" id="inlineFormInput" placeholder="Nome" formControlName="firstName">
+    <input type="text" class="form-control mb-4 mr-sm-4 mb-sm-4" placeholder="Sobrenome" formControlName="lastName">
+    <input type="number" class="form-control mb-4 mr-sm-4 mb-sm-4" placeholder="Participacao" formControlName="participation">
+
+    <button type="submit" class="btn btn-primary mb-4 mr-sm-4 mb-sm-4">Enviar</button>
+  </form>
+</div>

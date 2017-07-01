@@ -1,0 +1,19 @@
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Participação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; let i = index">
+        <td>{{i}}</td>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.participation | number: '1.0-2'}}%</td>
+      </tr>
+    </tbody>
+  </table>

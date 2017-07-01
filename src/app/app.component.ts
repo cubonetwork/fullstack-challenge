@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  public options = {
+    position: ["top", "right"],
+    timeOut: 5000,
+    lastOnBottom: true
+  }
 }
