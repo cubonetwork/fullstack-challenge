@@ -1,10 +1,10 @@
 /**
  * The API server configuration
  */
-var express = require('express'),
-    app = express(),
-    port = process.env.PORT || 3000;
+import express from 'express';
 
-app.listen(port);
+const app = express();
 
-console.log('API started in ' + port + ' port.');
+app.listen(process.env.PORT || 3000);
+
+console.log('Server started in ' + port + ' port.');
