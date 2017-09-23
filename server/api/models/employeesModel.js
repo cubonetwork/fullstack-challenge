@@ -1,11 +1,11 @@
 /**
  * The Employees model
  */
-import mongoose from 'mongoose'
 
-const Schema = mongoose.Schema
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema
 
-const EmployeeSchema = new Schema({
+var EmployeeSchema = new Schema({
     Id: Number,
     Name: String,
     LastName: String,
@@ -16,4 +16,4 @@ const EmployeeSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('Employees', EmployeeSchema)
+module.exports = mongoose.model('Employee', EmployeeSchema);
