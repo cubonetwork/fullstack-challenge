@@ -2,10 +2,14 @@
   "name": "employees-api",
   "version": "1.0.0",
   "description": "An express api to manage employees",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
   "author": "Angelo Santos @angelosds",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.15.4",
+    "nodemon": "^1.12.1"
+  }
 }
