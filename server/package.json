@@ -1,0 +1,11 @@
+{
+  "name": "employees-api",
+  "version": "1.0.0",
+  "description": "An express api to manage employees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Angelo Santos @angelosds",
+  "license": "ISC"
+}
