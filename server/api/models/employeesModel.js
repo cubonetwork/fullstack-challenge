@@ -1,18 +1,29 @@
 /**
- * The Employees model
+ * The Employees Model
  */
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema
 
-var EmployeeSchema = new Schema({
-    name: String,
-    lastName: String,
-    participation: Number,
+let EmployeeSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true
+    },
+    participation: {
+        type: Number,
+        required: true
+    },
     createDate: {
         type: Date,
         default: Date.now
     }
+}, {
+    versionKey: false
 });
 
 module.exports = mongoose.model('Employee', EmployeeSchema);

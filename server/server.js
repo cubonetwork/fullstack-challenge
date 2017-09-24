@@ -1,17 +1,19 @@
 /**
  * The API server configuration
  */
-var express = require('express');
-var mongoose = require('mongoose');
-var Employee = require('./api/models/employeesModel');
-var bodyParser = require('body-parser');
 
-var app = express();
-var port = process.env.PORT || 3000;
+const express = require('express');
+const mongoose = require('mongoose');
+const Employee = require('./api/models/employeesModel');
+const bodyParser = require('body-parser');
+const config = require('config');
+
+const app = express();
+const port = process.env.PORT || 3000;
 
 // Configure Mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/EmployeesDb', {
+mongoose.connect(config.connectionString, {
     useMongoClient: true
 });
 
@@ -25,6 +27,10 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/employeesRoutes');
 routes(app);
 
-app.listen(port);
+if (!module.parent) {
+    app.listen(port);
+}
 
 console.log('Server started in ' + port + ' port.');
+
+module.exports = app;
