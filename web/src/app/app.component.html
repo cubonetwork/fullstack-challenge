@@ -1,0 +1,27 @@
+<header>
+  <div class="container">
+    <h1 class="white">CADASTRE-SE</h1>
+    <p class="subtitle white">Inclua os funcionários de sua empresa, definindo o percentual de participação de cada um.</p>
+
+    <section class="employee-form">
+      <employee-form (onCreated)="onEmployeeCreated($event)"></employee-form>
+    </section>
+  </div>
+</header>
+
+<main>
+  <div class="container employee-data">
+    <h2>DADOS</h2>
+    <p class="subtitle">Abaixo uma lista dos funcionários cadastrados e um gráfico ilustrando a participação de cada um deles.</p>
+    
+    <section class="employee-list">
+      <employee-list [employees]="employees"></employee-list>
+    </section>
+    
+    <section class="employee-chart">
+      <employee-piechart [employees]="employees"></employee-piechart>
+    </section>
+  </div>
+</main>
+
+

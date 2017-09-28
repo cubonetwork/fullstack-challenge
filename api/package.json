@@ -1,0 +1,36 @@
+{
+  "name": "cubonetwork-fullstack-challenge-api",
+  "version": "1.0.0",
+  "description": "Resolução para o desafio de avaliação de candidatos à vaga de Fullstack Developer para empresa Cubo.Network (https://github.com/cubonetwork/fullstack-challenge/blob/master/README.md)",
+  "main": "index.js",
+  "scripts": {
+    "setup": "cp ./app/config/app.yml.sample ./app/config/app.yml",
+    "start": "node app.js",
+    "test": "NODE_ENV=test mocha tests --recursive",
+    "e2e": "NODE_ENV=test node app.js"
+  },
+  "keywords": [
+    "cubo",
+    "network",
+    "desafio",
+    "fullstack",
+    "REST API"
+  ],
+  "author": "Murilo Amêndola",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "express": "^4.15.4",
+    "express-validator": "^4.2.1",
+    "sequelize": "^4.10.3",
+    "sqlite3": "^3.1.12",
+    "winston": "^2.3.1",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.5.3"
+  }
+}

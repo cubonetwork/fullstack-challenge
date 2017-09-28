@@ -1,0 +1,49 @@
+<div *ngIf="errorMessage" class="error">{{errorMessage}}</div>
+
+<form [formGroup]="frmEmployee" (submit)="register($event)" >
+    
+    <div class="form-group">
+        <input
+            type="text"
+            placeholder="Nome" 
+            formControlName="nome" 
+            name="nome" 
+            [(ngModel)]="employee.nome" 
+            maxlength="20" />
+        <div *ngIf="frmEmployee.controls.nome.invalid" class="error-message">
+            Nome é obrigatório (máx. 20 caracteres)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input
+            type="text"
+            placeholder="Sobrenome" 
+            formControlName="sobrenome" 
+            name="sobrenome" 
+            [(ngModel)]="employee.sobrenome" 
+            maxlength="20" />
+        <div *ngIf="frmEmployee.controls.sobrenome.invalid" class="error-message">
+            Sobrenome é obrigatório (máx. 20 caracteres)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input 
+            type="number" 
+            placeholder="Participação"
+            formControlName="participacao" 
+            name="participacao"
+            [(ngModel)]="employee.participacao" 
+            ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" 
+            step="1.00" />
+        <div *ngIf="frmEmployee.controls.participacao.invalid" class="error-message">
+           Participação deve ser um número entre 0 e 100%
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" id="btnEnviar" [disabled]="frmEmployee.invalid">Enviar</button>
+    </div>
+
+</form>
