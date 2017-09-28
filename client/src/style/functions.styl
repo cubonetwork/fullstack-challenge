@@ -1,0 +1,9 @@
+/**
+ * Mixins
+ */
+
+@import './typography.styl';
+
+// Convert pixels to root relative size
+relative-size(value)
+    return unit(value / $font-size, 'rem')
