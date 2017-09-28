@@ -1,0 +1,23 @@
+<div class="info" [hidden]="employees.length">
+    Nenhum funcionário cadastrado até o momento.
+</div>
+
+<table [hidden]="!employees.length">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Participação</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of employees; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{employee.nome}}</td>
+            <td>{{employee.sobrenome}}</td>
+            <td>{{employee.participacao}}%</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,99 @@
+form {
+    overflow: hidden; /* clearfix */
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.form-group {
+    width: 30%;
+    float: left;
+}
+.form-group:last-child {
+    width: 10%;
+}
+
+.form-group input {
+    border-radius: 2px;
+    box-shadow: 1px #81ECFF;
+    width: 95%;
+    height: 2.5em;
+    padding: 0.5em;
+    -webkit-appearance: none;
+}
+
+.form-group button {
+    background: #00b9de;
+    color: #FFF;
+    font-size: 90%;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #81ECFF;
+    border-radius: 2px;    
+    width: 100%;
+    height: 2.8em;
+}
+.form-group button:hover:enabled {
+    background: #00B0D3;
+}
+.form-group button:disabled {
+    opacity: 0.3;
+}
+
+.form-group .error-message {
+    color: #cc0033;
+    display: inline-block;
+    font-size:0.8em;
+    line-height: 1.em;
+    margin: 5px 0 0;
+}
+
+.error {
+    width: 100%;
+    margin: 10px auto;
+    color: #D8000C;
+    background-color: #FFBABA;
+    border: 1px solid #FFBABA;
+    border-radius:.5em;
+    padding: 5px;
+}
+
+/* Angular validators styles */
+.form-group input.ng-valid {
+    border: 2px solid #42A948; /* green */
+}
+.form-group input.ng-invalid:not(form)  {
+    border: 2px solid #a94442; /* red */
+}
+
+/**
+* Smartphone
+*/
+@media (max-width: 477px) {
+    .form-group {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    
+    .form-group:last-child {
+        width: 100%;
+    }
+
+    .form-group input {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+
+    .form-group .error-message {
+        margin: 0 0 10px 0;
+        text-align: left;
+    }
+
+    .form-group button {
+        width: 90%;
+        margin: 15px 0;
+    }
+}

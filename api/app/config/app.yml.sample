@@ -1,0 +1,13 @@
+# debug, info, warn, error
+logging:
+  level: 'info'
+
+database:
+  test:
+    storage: ':memory:'
+    dialect: 'sqlite'
+    logging: false
+  development:
+    storage: './db.development.sqlite'
+    dialect: 'sqlite'
+    logging: true

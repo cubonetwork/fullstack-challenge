@@ -1,0 +1,35 @@
+table { 
+    width: 90%;
+    margin: 0 auto; 
+    border-collapse: collapse; 
+}
+
+tr:nth-of-type(odd) { 
+    background: #eee; 
+}
+
+th { 
+    background: #fff; 
+    color: #000; 
+    font-weight: bold; 
+}
+
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+}
+
+tr td:last-child {
+    text-align: center; 
+}
+
+.info {
+    width: 90%;
+    margin: 0 auto;
+    color: #00529B;
+    background-color: #BDE5F8;
+    border: 1px solid #BDE5F8;
+    border-radius:.5em;
+    padding: 5px;
+}

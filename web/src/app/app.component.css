@@ -1,0 +1,69 @@
+header,
+main{
+    width: 100%;
+}
+
+header {
+    display: inline-block;
+}
+
+header {
+	background: #00b9de;
+    min-height: 240px;
+}
+
+.container{
+    width: 100%;
+    margin: 30px auto;
+}
+
+.white {
+    color: #FFF;
+}
+
+h1, h2 {
+    font-size: 1.8em;
+    text-align : center;
+    text-transform: uppercase;
+}
+
+p {
+    width: 90%;
+    margin: 15px auto;
+    text-align : center;
+}
+
+.employee-data {
+    margin-top: 50px;
+}
+
+.employee-data section {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+}
+
+.employee-list {
+    overflow-x:auto;
+}
+
+/**
+* Tablet
+*/
+@media (min-width: 478px) {
+    .container {
+        max-width: 940px;
+        margin-right: auto;        
+        margin-left: auto;
+        padding: 0px 50px;
+    }
+}
+
+/**
+* Smartphone
+*/
+@media (max-width: 477px) {
+    .employee-data section {
+        width: 100%;
+    }    
+}
