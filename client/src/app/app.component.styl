@@ -4,12 +4,12 @@
 .main-header
     padding 40px 0
     background-color $primary
+    color #fff
+    text-align center
 
     > .title
     > .description
         padding 0
-        color #fff
-        text-align center
 
     > .title
         margin 0 0 10px 0
@@ -18,3 +18,17 @@
 
     > .description
         margin 0 0 20px 0
+
+.page-content
+    > .title
+    > .description
+        text-align center
+
+    > .title
+        @extends .main-header > .title
+
+    > .description
+        @extends .main-header > .description
+
+    > .content
+        display flex

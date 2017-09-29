@@ -1,0 +1,53 @@
+@import '../../style/colors.styl';
+@import '../../style/sizes.styl';
+@import '../../style/functions.styl';
+
+.main-form
+    display flex
+    justify-content stretch
+
+    @media $mq-max-desktop
+        flex-direction column
+
+    > .input
+    > .button
+        height $form-item-height
+        border 2px solid #fff
+        border-radius 2px
+
+    > .input
+        padding 0 15px
+        width 100%
+        font-size relative-size(14px)
+        transition .2s border linear
+
+        &:focus
+            border-color darken($color, 20%)
+            outline none
+
+        @media $mq-min-desktop
+            &:not(:first-child)
+                margin-left $form-gap
+
+        @media $mq-max-desktop
+            margin-bottom $form-gap
+
+    > .button
+        padding 0 40px
+        color #fff
+        background-color transparent
+        font-size relative-size(18px)
+        font-weight 700
+        text-transform uppercase
+        transition .2s color, .2s border linear
+
+        &:focus
+            outline none
+
+        &:focus
+        &:hover
+            color darken($color, 20%)
+            border-color darken($color, 20%)
+
+        @media $mq-min-desktop
+            margin-left $form-gap
