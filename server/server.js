@@ -17,6 +17,13 @@ mongoose.connect(config.connectionString, {
     useMongoClient: true
 });
 
+// Allow cross origin
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
+
 // Configure API to return content as JSON format
 app.use(bodyParser.urlencoded({
     extended: true
