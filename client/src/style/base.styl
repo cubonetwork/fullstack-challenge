@@ -25,4 +25,8 @@ body
     max-width $container-width
 
 .content-container
-    padding 90px 0
+    @media $mq-max-desktop
+        padding $gutter 0
+
+    @media $mq-min-desktop
+        padding 90px 0

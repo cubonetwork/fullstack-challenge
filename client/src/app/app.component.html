@@ -3,7 +3,7 @@
     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
     <div class="container">
-        <app-main-form></app-main-form>
+        <app-main-form (employeeAdded)="onEmployeeAdded($event)" [participationAvailable]="participationAvailable"></app-main-form>
     </div>
 </header>
 
@@ -14,7 +14,10 @@
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
             <div class="content">
-                <app-data-table></app-data-table>
+                <app-data-table [employees]="employees" class="item"></app-data-table>
+                <div class="item">
+                    <canvas class="item" #chart></canvas>
+                </div>
             </div>
         </div>
 

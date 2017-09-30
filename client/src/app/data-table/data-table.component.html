@@ -5,34 +5,11 @@
         <th class="table-field head">Sobrenome</th>
         <th class="table-field head -center">Participação</th>
     </tr>
-    <tr class="row">
-        <td class="table-field head -center">1</td>
-        <td class="table-field head">Carlos</td>
-        <td class="table-field head">Moura</td>
-        <td class="table-field head -center">5%</td>
-    </tr>
-    <tr class="row">
-        <td class="table-field head -center">2</td>
-        <td class="table-field head">Fernanda</td>
-        <td class="table-field head">Oliveira</td>
-        <td class="table-field head -center">15%</td>
-    </tr>
-    <tr class="row">
-        <td class="table-field head -center">3</td>
-        <td class="table-field head">Hugo</td>
-        <td class="table-field head">Silva</td>
-        <td class="table-field head -center">20%</td>
-    </tr>
-    <tr class="row">
-        <td class="table-field head -center">4</td>
-        <td class="table-field head">Eliza</td>
-        <td class="table-field head">Souza</td>
-        <td class="table-field head -center">20%</td>
-    </tr>
-    <tr class="row">
-        <td class="table-field head -center">5</td>
-        <td class="table-field head">Anderson</td>
-        <td class="table-field head">Santos</td>
-        <td class="table-field head -center">40%</td>
+
+    <tr class="row" *ngFor="let employee of employees; let i = index">
+        <td class="table-field head -center">{{i+1}}</td>
+        <td class="table-field head">{{employee.name}}</td>
+        <td class="table-field head">{{employee.lastName}}</td>
+        <td class="table-field head -center">{{employee.participation}}%</td>
     </tr>
 </table>

@@ -1,4 +1,5 @@
 @import '../style/functions.styl';
+@import '../style/sizes.styl';
 @import '../style/colors.styl';
 
 .main-header
@@ -32,3 +33,27 @@
 
     > .content
         display flex
+
+        @media $mq-min-desktop
+            flex-direction row
+
+        @media $mq-max-desktop
+            flex-direction column
+
+        > .item
+            overflow-x auto
+
+            @media $mq-min-desktop
+                width 50%
+
+                &:first-child
+                    padding-right $half-gutter
+
+                &:last-child
+                    padding-left $half-gutter
+
+            @media $mq-max-desktop
+                width 100%
+
+                &:not(:last-child)
+                    margin-bottom $gutter
