@@ -1,0 +1,59 @@
+@import '../style/functions.styl';
+@import '../style/sizes.styl';
+@import '../style/colors.styl';
+
+.main-header
+    padding 40px 0
+    background-color $primary
+    color #fff
+    text-align center
+
+    > .title
+    > .description
+        padding 0
+
+    > .title
+        margin 0 0 10px 0
+        font-size relative-size(30)
+        text-transform uppercase
+
+    > .description
+        margin 0 0 20px 0
+
+.page-content
+    > .title
+    > .description
+        text-align center
+
+    > .title
+        @extends .main-header > .title
+
+    > .description
+        @extends .main-header > .description
+
+    > .content
+        display flex
+
+        @media $mq-min-desktop
+            flex-direction row
+
+        @media $mq-max-desktop
+            flex-direction column
+
+        > .item
+            overflow-x auto
+
+            @media $mq-min-desktop
+                width 50%
+
+                &:first-child
+                    padding-right $half-gutter
+
+                &:last-child
+                    padding-left $half-gutter
+
+            @media $mq-max-desktop
+                width 100%
+
+                &:not(:last-child)
+                    margin-bottom $gutter

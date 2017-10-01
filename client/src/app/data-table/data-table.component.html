@@ -1,0 +1,15 @@
+<table class="data-table">
+    <tr class="row">
+        <th class="table-field head"></th>
+        <th class="table-field head">Nome</th>
+        <th class="table-field head">Sobrenome</th>
+        <th class="table-field head -center">Participação</th>
+    </tr>
+
+    <tr class="row" *ngFor="let employee of employees; let i = index">
+        <td class="table-field head -center">{{i+1}}</td>
+        <td class="table-field head">{{employee.name}}</td>
+        <td class="table-field head">{{employee.lastName}}</td>
+        <td class="table-field head -center">{{employee.participation}}%</td>
+    </tr>
+</table>

@@ -1,0 +1,25 @@
+{
+    "name": "employees-api",
+    "version": "1.0.0",
+    "description": "An express api to manage employees",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon server.js",
+        "test": "mocha --timeout 10000"
+    },
+    "author": "Angelo Santos @angelosds",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "config": "^1.26.2",
+        "express": "^4.15.4",
+        "mongoose": "^4.11.12"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "chai-http": "^3.0.0",
+        "mocha": "^3.5.3",
+        "nodemon": "^1.12.1",
+        "supertest": "^3.0.0"
+    }
+}

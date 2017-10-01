@@ -1,0 +1,25 @@
+<header class="main-header">
+    <h1 class="title">Cadastre-se</h1>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="container">
+        <app-main-form (employeeAdded)="onEmployeeAdded($event)" [participationAvailable]="participationAvailable"></app-main-form>
+    </div>
+</header>
+
+<section class="content-container">
+    <div class="container">
+        <div class="page-content">
+            <h2 class="title">Dados</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div class="content">
+                <app-data-table [employees]="employees" class="item"></app-data-table>
+                <div class="item">
+                    <canvas class="item" #chart></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

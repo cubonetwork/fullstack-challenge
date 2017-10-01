@@ -41,6 +41,24 @@ Você deve desenvolver esta API que retorna o JSON com a lista de "employees" (f
 
 > Obs 3.: Considere validar os campos também na API e em caso de inconsistência retornar erro num JSON estruturado com código HTTP 400
 
+## Instruções de execução
+
+1. Acesse a pasta **server** e execute os códigos a seguir no terminal:
+    ```sh
+    $ npm install
+    $ npm run start
+    ```
+2. Instale o **angular-cli** através do seguinte código:
+    ```sh
+    $ npm i -g @angular/cli
+    ```
+
+3. Acesse a pasta **client** e execute os códigos a seguir no terminal:
+    ```sh
+    $ npm install
+    $ ng serve
+    ```
+Acesse http://localhost:4200/ para visualizar o projeto em execução.
 
 ## Dicas Angular 2
 

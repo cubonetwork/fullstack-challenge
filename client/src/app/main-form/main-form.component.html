@@ -1,0 +1,6 @@
+<form class="main-form" (submit)="onAddItem($event)">
+    <input type="text" class="input" placeholder="Nome" required [disabled]="participationAvailable === 0" #nameInput>
+    <input type="text" class="input" placeholder="Sobrenome" required [disabled]="participationAvailable === 0" #lastNameInput>
+    <input type="number" class="input" min="1" max="{{participationAvailable}}" placeholder="Participação" required [disabled]="participationAvailable === 0" #participationInput>
+    <input type="submit" class="button" value="Enviar" [disabled]="participationAvailable === 0">
+</form>

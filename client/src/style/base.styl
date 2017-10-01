@@ -1,0 +1,32 @@
+@import './sizes.styl'
+
+*
+    box-sizing border-box
+
+html
+    font-size $font-size
+    line-height $font-size + 8
+
+body
+    font-family 'Arial', sans-serif
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+    color $color
+    background-color $background
+
+::selection
+    background darken($primary, 20%)
+    color #fff
+
+.container
+    padding 0 $half-gutter
+    margin 0 auto
+    width 100%
+    max-width $container-width
+
+.content-container
+    @media $mq-max-desktop
+        padding $gutter 0
+
+    @media $mq-min-desktop
+        padding 90px 0

@@ -1,0 +1,3 @@
+{
+    "connectionString": "mongodb://localhost/EmployeesDb"
+}
