@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://cubo.network/assets/svg/logo/logo-cubo-redpoint.svg" width="400">
+</p>
+
 # { "developer": "fullstack" } ao CUBO \o/
 
 Objetivo deste desafio é avaliarmos o seu domínio em desenvolvimento fullstack, ou seja, sua organização, estilo e boas práticas com o código, criação de APIs Restfull, conhecimento dos frameworks e tecnologias utilizadas.
