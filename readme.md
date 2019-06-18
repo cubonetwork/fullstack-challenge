@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cubo.network/assets/images/cubo.svg" width="200">
+  <img src="https://painel.cotabox.com.br/_nuxt/img/fb9c06b.png" width="300">
 </p>
 
 # { "developer": "fullstack" }
@@ -9,8 +9,8 @@ The objective of this challenge is to evaluate your domain in fullstack developm
 ## Rules
 
 1. Your code should be made available in a public or private repository, on your personal github or bitbucket;
-2. Send the link to dev@cubo.network;
-3. We use Angular and Node.js with Serverless, but you can feel free to choose other technologies;
+2. Send the link to desenvolvimento@cotabox.com.br;
+3. We use VueJS and Node.js with MongoDB, but you can feel free to choose other technologies;
 
 ## Challenge
 
@@ -39,4 +39,4 @@ Feel free to make improviments like new funcionalities, visual optimizations, AP
 
 ## Questions?
 
-Send your questions directly to dev@cubo.network or opening a issue.
+Send your questions directly to desenvolvimento@cotabox.com.br or opening a issue.
