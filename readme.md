@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://dashboard.cotabox.com.br/_nuxt/img/fb9c06b.png" width="300">
+  <img src="./Grupo 116@2x.png" width="300">
 </p>
 
 # { "developer": "fullstack" }
