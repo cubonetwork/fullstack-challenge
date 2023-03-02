@@ -1,42 +1,46 @@
 <p align="center">
-  <img src="https://cubo.network/assets/images/cubo.svg" width="200">
+  <img src="Logotipo_cotabox_SemFundo.png" width="450">
 </p>
 
 # { "developer": "fullstack" }
 
-The objective of this challenge is to evaluate your domain in fullstack development: its organization, style and good practices with code, APIs creation, frameworks knowledge and technologies.
+O objetivo do desafio é avaliar seu domínio fullstack: organização, coding style e boas práticas, além do uso de ferramentas e frameworks para a criação de APIs e telas front-end.
 
-## Rules
+## Regras
 
-1. Your code should be made available in a public or private repository, on your personal github or bitbucket;
-2. Send the link to dev@cubo.network;
-3. We use Angular and Node.js with Serverless, but you can feel free to choose other technologies;
+1. Seu código deve estar disponível em um repositório público; caso prefira um repositório privado, iremos enviar os "usernames" para adicionar ao repositório depois de nos enviar o link;
+2. Envie o repositório para desenvolvimento@cotabox.com.br;
 
-## Challenge
+Nós usamos VueJS, node.js, graphQL e MongoDB, mas sinta-se à vontade para usar o que lhe for mais confortável.
+
+## Desafio
 
 ### Front-end
 
-The following layout should be developed
+O seguinte layout deve ser criado:
 ![layout](layout-onepage.png)
 
-[You can download the PSD here](layout-onepage.psd)
+[Baixe o layout aqui, se preferir](layout-onepage.psd)
 
-- You can use the libs and frameworks that make you more comfortable;
-- All fields are required in the form;
-- We'll be happy if you develop tests for it;
+Requisitos:
+- Você pode usar bibliotecas e frameworks que preferir;
+- Todos os campos são obrigatórios;
+- Será um diferencial se adicionar testes unitários.
 
 ### Back-end
 
-The layout has a form, a table with percentage information of participation and a pizza graph that represents this distribution.
+A tela a ser criada possui uma tabela e informações em porcentagem referentes à cada participante da distribuição.
 
-- You need to create APIs that sends and receives these informations;
-- We'll be happy if you develop tests for it;
-- In case of inconsistency, return the error in a structured JSON with HTTP 400 code;
+- Você precisará desenvolver uma API para enviar e receber essas informações;
+- Será um diferencial se cobrir seu código com testes unitários;
+- Em caso de inconsitência ou erros de validação, por ex, esperemos que a API retorne o erro adequadamente (com erro 400).
 
-#### Plus
+#### Adicionais
 
-Feel free to make improviments like new funcionalities, visual optimizations, API security, etc. 😉
+Fique à vontade para fazer melhorias, como novas funcionalidade, visual diferente, segurança na API, o que quiser :)
 
-## Questions?
+É um grande diferencial se conseguir hospedar seu desafio, mas se não puder, incluir um Docker ou docker-compose será de bom tamanho.
 
-Send your questions directly to dev@cubo.network or opening a issue.
+## Dúvidas?
+
+Caso tenha dúvidas nos envie um e-mail: desenvolvimento@cotabox.com.br
