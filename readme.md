@@ -9,7 +9,7 @@ The objective of this challenge is to evaluate your domain in fullstack developm
 ## Rules
 
 1. Your code should be made available in a public or private repository, on your personal github or bitbucket. But, if you preffer, create a Pull Request with your application;
-2. Send the link to turbiani@cotabox.com.br;
+2. Send the link to desenvolvimento@cotabox.com.br;
 3. We use VueJS and Node.js with MongoDB, but you can feel free to choose other technologies;
 
 ## Challenge
