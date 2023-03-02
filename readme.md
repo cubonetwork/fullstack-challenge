@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./Grupo 116@2x.png" width="300">
+  <img src="Logotipo_cotabox_SemFundo.png" width="450">
 </p>
 
 # { "developer": "fullstack" }
